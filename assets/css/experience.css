@@ -29,7 +29,7 @@
 	display: block;
 	width: 1.2rem;
 	height: 1.2rem;
-	background-image: url("./assets/icons/date.svg");
+	background-image: url("../icons/date.svg");
 	background-repeat: round;
 	filter: contrast(0.5) brightness(3);
 }

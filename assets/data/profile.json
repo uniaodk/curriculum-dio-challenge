@@ -11,7 +11,7 @@
 	"languages": [
 		{
 			"name": "Portuguese",
-			"path_icon": "/assets/icons/flag-brazil.svg",
+			"path_icon": "./assets/icons/flag-brazil.svg",
 			"alt_icon": "Flag Brazil"
 		},
 		{

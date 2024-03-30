@@ -14,7 +14,7 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-image: url("./assets/icons/dots.svg");
+	background-image: url("../icons/dots.svg");
 	background-repeat: round;
 	filter: contrast(0) brightness(2);
 }
@@ -59,19 +59,19 @@
 }
 
 .information .job::before {
-	background-image: url('./assets/icons/job.svg');
+	background-image: url('../icons/job.svg');
 }
 
 .information .location::before {
-	background-image: url('./assets/icons/location.svg');
+	background-image: url('../icons/location.svg');
 }
 
 .information .email::before {
-	background-image: url('./assets/icons/email.svg');
+	background-image: url('../icons/email.svg');
 }
 
 .information .phone::before {
-	background-image: url('./assets/icons/phone.svg');
+	background-image: url('../icons/phone.svg');
 }
 
 

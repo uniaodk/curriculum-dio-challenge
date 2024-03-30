@@ -51,7 +51,7 @@
 	height: 2rem;
 	width: 2rem;
 	display: inline-block;
-	background-image: url("./assets/icons/arrow-top.svg");
+	background-image: url("../icons/arrow-top.svg");
 	background-repeat: round;
 	filter: contrast(0) brightness(4);
 	transition: .25s;
