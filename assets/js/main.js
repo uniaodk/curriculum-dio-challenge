@@ -1,18 +1,18 @@
 const headerElement = document.getElementById("header");
 const languagesElement = document.getElementById("languages");
-const respositoriesElement = doocument.getElementById("repositories");
+const respositoriesElement = document.getElementById("repositories");
 const experiencesElement = document.getElementById("experiences");
 const hardSkillsElement = document.getElementById("hard-skills");
 const softSkillsElement = document.getElementById("soft-skills");
 
 (async () => {
 	const profile = await getProfile();
-	headerElement.innerHTML += buildHeaderTemplate(profile.header);
-	languagesElement.innerHTML += buildLanguagesTemplate(profile.languages);
-	respositoriesElement.innerHTML += buildRepositoriesTemplate(profile.repositories);
-	experiencesElement.innerHtml += buildExperiencesTemplate(profile.languages);
-	hardSkillsElement.innerHtml += buildHardSkillsTemplate(profile.hardSkills);
-	softSkillsElement.innerHtml += buildSoftSkillsTemplate(profile.softSkills);
+	headerElement.innerHTML = buildHeaderTemplate(profile.header);
+	languagesElement.innerHTML = buildLanguagesTemplate(profile.languages);
+	respositoriesElement.innerHTML = buildRepositoriesTemplate(profile.repositories);
+	experiencesElement.innerHTML = buildExperiencesTemplate(profile.experiences);
+	hardSkillsElement.innerHTML = buildHardSkillsTemplate(profile.hardSkills);
+	softSkillsElement.innerHTML = buildSoftSkillsTemplate(profile.softSkills);
 })();
 
 function buildHeaderTemplate(header) {
@@ -31,8 +31,8 @@ function buildLanguagesTemplate(languages) {
 	return languages.reduce((languagesTemplate, language) => {
 		let template = `<li class="language">`;
 		template += language.path_icon 
-			? `<span class="level">${language.level}</span>`
-			: `<img src="${language.path_icon}" alt="${language.alt_icon}">`;
+			? `<img src="${language.path_icon}" alt="${language.alt_icon}">`
+			: `<span class="level">${language.level}</span>`;
 		template += `<span>${language.name}</span>
 		</li>`;
 		return languagesTemplate + template;
@@ -76,4 +76,10 @@ function buildSoftSkillsTemplate(softSkills) {
 	return softSkills.reduce((softSkillsTemplate, softSkill) => {
 		return softSkillsTemplate + `<li class="soft-skill">${softSkill}</li>`
 	}, '');
+}
+
+toNode = (tagText) => {
+	const tempDiv = document.createElement('div');
+	tempDiv.innerHTML = tagText;
+	return tempDiv.firstChild;
 }
