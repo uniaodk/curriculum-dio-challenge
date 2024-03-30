@@ -62,31 +62,31 @@
 	"hardSkills": [
 		{
 			"name": "Java",
-			"path_icon": "/assets/icons/java.svg"
+			"path_icon": "./assets/icons/java.svg"
 		},
 		{
 			"name": "Spring Boot",
-			"path_icon": "/assets/icons/spring.svg"
+			"path_icon": "./assets/icons/spring.svg"
 		},
 		{
 			"name": "PostgreSQL",
-			"path_icon": "/assets/icons/postgresql.svg"
+			"path_icon": "./assets/icons/postgresql.svg"
 		},
 		{
 			"name": "Java Script",
-			"path_icon": "/assets/icons/javascript.svg"
+			"path_icon": "./assets/icons/javascript.svg"
 		},
 		{
 			"name": "HTML",
-			"path_icon": "/assets/icons/html.svg"
+			"path_icon": "./assets/icons/html.svg"
 		},
 		{
 			"name": "CSS",
-			"path_icon": "/assets/icons/css.svg"
+			"path_icon": "./assets/icons/css.svg"
 		},
 		{
 			"name": "Angular",
-			"path_icon": "/assets/icons/angular.svg"
+			"path_icon": "./assets/icons/angular.svg"
 		}
 	],
 	"softSkills": [
