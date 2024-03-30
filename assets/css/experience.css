@@ -1,0 +1,40 @@
+.experiences {
+	width: 100%;
+	gap: 2rem 5rem !important;
+}
+
+.experience {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	text-align: left;
+}
+
+.experience h3 {
+	margin: 0;
+	font-weight: bold;
+}
+
+.experience .period {
+	opacity: .7;
+	margin: .6rem 0;
+	display: flex;
+	gap: .7rem;
+	align-items: center;
+}
+
+
+.experience .period::before {
+	content: '';
+	display: block;
+	width: 1.2rem;
+	height: 1.2rem;
+	background-image: url("/assets/icons/date.svg");
+	background-repeat: round;
+	filter: contrast(0.5) brightness(3);
+}
+
+.experience .info {
+	margin: 0;
+	text-align: justify;
+}

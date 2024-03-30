@@ -1,0 +1,17 @@
+.languages .language {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+
+.languages img {
+	width: 1.5rem;
+}
+
+.languages .level {
+	background-color: black;
+	padding: .3rem .5rem;
+	font-weight: bold;
+	border-radius: .5rem;
+	font-size: 0.8rem;
+}

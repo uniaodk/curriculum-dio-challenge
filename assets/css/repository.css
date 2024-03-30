@@ -1,0 +1,54 @@
+.repositories {
+	cursor: initial;
+	width: 100%;
+}
+
+.repository {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+}
+
+.repository::before {
+	content: '';
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	background-image: url("/assets/icons/github.svg");
+	background-repeat: round;
+}
+
+.repository .detail {
+	display: flex;
+	width: inherit;
+	flex-direction: column;
+	align-items: flex-start;
+	text-wrap: nowrap;
+	max-width: calc(100% - 2.5rem);
+}
+
+.repository .detail span {
+	width: inherit;
+	font-weight: bold;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.repository .detail a {
+	width: inherit;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 500px) {
+	.repositories {
+		font-size: .8rem;
+	}
+
+	.repository::before {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
