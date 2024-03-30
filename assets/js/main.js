@@ -16,7 +16,7 @@ const softSkillsElement = document.getElementById("soft-skills");
 })();
 
 function buildHeaderTemplate(header) {
-	return `<img class="photo" src="${header.path_photo}" alt="Picture ${header.name}">
+	return `<img class="photo" src="${header.url_photo}" alt="Picture ${header.name}">
 	<h1 class="title">Hi,<br>I am ${header.name}</h1>
 	<div class="information">
 		<a href="${header.url_linkedin}" target="_blank" class="job">${header.job}</a>
