@@ -4,6 +4,7 @@ const respositoriesElement = document.getElementById("repositories");
 const experiencesElement = document.getElementById("experiences");
 const hardSkillsElement = document.getElementById("hard-skills");
 const softSkillsElement = document.getElementById("soft-skills");
+const educationsElement = document.getElementById("educations");
 
 (async () => {
 	const profile = await getProfile();
@@ -13,10 +14,10 @@ const softSkillsElement = document.getElementById("soft-skills");
 	experiencesElement.innerHTML = buildExperiencesTemplate(profile.experiences);
 	hardSkillsElement.innerHTML = buildHardSkillsTemplate(profile.hardSkills);
 	softSkillsElement.innerHTML = buildSoftSkillsTemplate(profile.softSkills);
+	educationsElement.innerHTML = buildEducationsTemplate(profile.educations);
 })();
 
 function buildHeaderTemplate(header) {
-	console.log(header);
 	return `<img class="photo" src="${header.url_photo}" alt="Picture ${header.name}">
 	<h1 class="title">Hi,<br>I am ${header.name}</h1>
 	<div class="information">
@@ -29,21 +30,21 @@ function buildHeaderTemplate(header) {
 
 function buildLanguagesTemplate(languages) {
 	if (!languages) return '';
-	return languages.reduce((languagesTemplate, language) => {
-		let template = `<li class="language">`;
-		template += language.path_icon 
+	return languages.reduce((template, language) => {
+		let buildTemplate = `<li class="language">`;
+		buildTemplate += language.path_icon
 			? `<img src="${language.path_icon}" alt="${language.alt_icon}">`
 			: `<span class="level">${language.level}</span>`;
-		template += `<span>${language.name}</span>
+		buildTemplate += `<span>${language.name}</span>
 		</li>`;
-		return languagesTemplate + template;
+		return template + buildTemplate;
 	}, "");
 }
 
 function buildRepositoriesTemplate(repositories) {
 	if (!repositories) return '';
-	return repositories.reduce((repositoriesTemplate, repository) => {
-		return repositoriesTemplate + `<li class="repository">
+	return repositories.reduce((template, repository) => {
+		return template + `<li class="repository">
 		<div class="detail">
 			<span>${repository.name}</span>
 			<a href="${repository.url}" target="_blank">${repository.url}</a>
@@ -54,8 +55,8 @@ function buildRepositoriesTemplate(repositories) {
 
 function buildExperiencesTemplate(experiences) {
 	if (!experiences) return '';
-	return experiences.reduce((experiencesTemplate, experience) => {
-		return experiencesTemplate + `<li class="experience">
+	return experiences.reduce((template, experience) => {
+		return template + `<li class="experience">
 		<h3>${experience.job}</h3>
 		<p class="period">${experience.period}</p>
 		<p class="info">${experience.info}</p>
@@ -65,8 +66,8 @@ function buildExperiencesTemplate(experiences) {
 
 function buildHardSkillsTemplate(hardSkills) {
 	if (!hardSkills) return '';
-	return hardSkills.reduce((hardSkillsTemplate, hardSkill) => {
-		return hardSkillsTemplate + `<li class="hard-skill">
+	return hardSkills.reduce((template, hardSkill) => {
+		return template + `<li class="hard-skill">
 		<img src="${hardSkill.path_icon}" alt="${hardSkill.name}">
 	</li>`
 	}, '');
@@ -74,13 +75,18 @@ function buildHardSkillsTemplate(hardSkills) {
 
 function buildSoftSkillsTemplate(softSkills) {
 	if (!softSkills) return '';
-	return softSkills.reduce((softSkillsTemplate, softSkill) => {
-		return softSkillsTemplate + `<li class="soft-skill">${softSkill}</li>`
+	return softSkills.reduce((template, softSkill) => {
+		return template + `<li class="soft-skill">${softSkill}</li>`
 	}, '');
 }
 
-toNode = (tagText) => {
-	const tempDiv = document.createElement('div');
-	tempDiv.innerHTML = tagText;
-	return tempDiv.firstChild;
+function buildEducationsTemplate(educations) {
+	if (!educations) return '';
+	return educations.reduce((template, education) => {
+		return template + `<li class="experience">
+		<h3>${education.college}</h3>
+		<p class="period">${education.period}</p>
+		<p class="info">${education.course}</p>
+	</li>`
+	}, '');
 }

@@ -1,21 +1,25 @@
-.experiences {
+.experiences
+.educations {
 	width: 100%;
 	gap: 2rem 5rem !important;
 }
 
-.experience {
+.experience,
+.education {
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
 	text-align: left;
 }
 
-.experience h3 {
+.experience h3,
+.education h3 {
 	margin: 0;
 	font-weight: bold;
 }
 
-.experience .period {
+.experience .period,
+.education .period {
 	opacity: .7;
 	margin: .6rem 0;
 	display: flex;
@@ -24,7 +28,8 @@
 }
 
 
-.experience .period::before {
+.experience .period::before,
+.education .period::before {
 	content: '';
 	display: block;
 	width: 1.2rem;
@@ -34,7 +39,8 @@
 	filter: contrast(0.5) brightness(3);
 }
 
-.experience .info {
+.experience .info,
+.education .info {
 	margin: 0;
 	text-align: justify;
 }

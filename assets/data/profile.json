@@ -95,5 +95,17 @@
 		"Organized",
 		"Methodical",
 		"Like working in a team"
+	],
+	"educations": [
+		{
+			"college": "UniCesumar",
+			"period": "2022 - current",
+			"course": "Associate's degree, Superior de Tecnologia em Jogos Digitais"
+		},
+		{
+			"college": "Universidade do Vale do Itajaí",
+			"period": "2017 - 2021",
+			"course": "Bachelor's degree, Ciência da Computação"
+		}
 	]
 }

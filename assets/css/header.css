@@ -59,7 +59,8 @@
 }
 
 .information .job::before {
-	background-image: url('../icons/job.svg');
+	filter: brightness(20.5);
+	background-image: url('../icons/linkedin.svg');
 }
 
 .information .location::before {
