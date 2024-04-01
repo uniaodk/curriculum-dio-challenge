@@ -12,6 +12,7 @@ https://renanjpaula.github.io/js-developer-portfolio/
 
 # Result
 
-https://uniaodk.github.io/pokedex-dio-challenge/
+https://uniaodk.github.io/portifolio-dio-challenge/
+
 <img src="https://github.com/uniaodk/curriculum-dio-challenge/assets/52884069/a2efc25f-580b-4113-b759-3ce7bb2d151a" width="200"/>
 
